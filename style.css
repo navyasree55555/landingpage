@@ -1,0 +1,139 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url("clg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding:2% 2% 2% 2%;
+    justify-content: space-between;
+    align-content: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 9px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: whitesmoke;
+    text-decoration:none;
+    font-size: 13px;
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background:#f44336;
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width:0%;
+    height: 2px;
+    background:#f44336;
+    display:block;
+    margin:auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width:100%;
+}
+
+.text-box{
+    width: 90%;
+    color:#fff;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+     margin: 10px 0 40px;
+     font-size:14px;
+     color:#fff;
+}
+
+button{
+    background:transparent;
+    color:aqua;
+    font-weight: bold;
+    padding: 1% 1%;
+    border:2px solid #f44336;
+    border-radius: 32px;
+    transform: translate(0);
+    overflow:hidden;
+    cursor: pointer;
+}
+
+button::before{
+    content: "";
+    position:absolute;
+    background-color: cyan;
+    width: 8px;
+    top:0;
+    bottom:0;
+    left: -32px;
+    transform:rotate(-16deg);
+    filter:blur(6px);
+}
+
+button:hover::before{
+    left: calc(100% + 32px);
+    transition: 2s
+}
+
+button a{
+    font-family: 'Times New Roman', Times, serif ;
+    color:#fff;
+    text-decoration: none;
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
